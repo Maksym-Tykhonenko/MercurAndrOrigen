@@ -3,16 +3,16 @@ workflows:
     name: Merkur to Neptune Calendar
     max_build_duration: 120
     integrations:
-      app_store_connect: KingsChroniclesApiKeyNew
+      app_store_connect: MerkurToNeptuneCalendarAPIKey
     environment:
       ios_signing:
         distribution_type: app_store
-        bundle_identifier: com.kings.chronicles
+        bundle_identifier: com.MerkurNeptune.Calendar
       vars:
-        APP_STORE_APPLE_ID: 6741104779
-        BUNDLE_ID: 'com.kings.chronicles'
-        XCODE_WORKSPACE: 'KingsChronicles.xcworkspace'
-        CODE_SCHEME: 'KingsChronicles'
+        APP_STORE_APPLE_ID: 6741592689
+        BUNDLE_ID: 'com.MerkurNeptune.Calendar'
+        XCODE_WORKSPACE: 'Mercur.xcworkspace'
+        CODE_SCHEME: 'Mercur'
     scripts:
       - name: Install node modules
         script: |
@@ -51,4 +51,4 @@ workflows:
       app_store_connect:
         auth: integration
         submit_to_app_store: true
-        copyright: Kings Chronicles KH 2025
+        copyright: Merkur to Neptune Calendar 2025
