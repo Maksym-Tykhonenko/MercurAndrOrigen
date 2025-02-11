@@ -6,6 +6,7 @@ import {
   StyleSheet,
   Image,
   TouchableOpacity,
+  ImageBackground
 } from 'react-native';
 import {
   Text,
@@ -213,6 +214,7 @@ export const ProfileScreen: React.FC = () => {
 
   return (
     <SafeAreaView style={styles.container}>
+      <ImageBackground style={{ flex: 1 }} source={require('./../assets/bg.jpg')}>
       <ScrollView style={styles.scrollContent}>
         <View style={styles.contentContainer}>
           {/* Profile */}
@@ -346,7 +348,7 @@ export const ProfileScreen: React.FC = () => {
             </View>
           </ScrollView>
         </Modal>
-      </Portal>
+      </Portal></ImageBackground>
     </SafeAreaView>
   );
 };

@@ -1,5 +1,5 @@
 import React, {useState} from 'react';
-import {View, ScrollView, StyleSheet, Dimensions} from 'react-native';
+import {View, ScrollView, StyleSheet, Dimensions,ImageBackground} from 'react-native';
 import {
   Card,
   Title,
@@ -211,7 +211,7 @@ const styles = StyleSheet.create({
   container: {
     flex: 1,
     backgroundColor: '#1a1b2e',
-    padding: 15,
+    //paddingTop: 15,
   },
   screenTitle: {
     fontSize: 28,
@@ -437,6 +437,8 @@ export const SurveysScreen: React.FC = () => {
 
     return (
       <Portal>
+        
+        
         <Modal
           visible={modalVisible}
           onDismiss={() => setModalVisible(false)}
@@ -550,11 +552,11 @@ export const SurveysScreen: React.FC = () => {
   };
 
   return (
-    <View style={styles.container}>
-      <Title style={styles.screenTitle}>Astronomy Quizzes</Title>
+    <View style={{...styles.container }}><ImageBackground style={{ flex: 1 }} source={require('./../assets/bg.jpg')}>
+      <Title style={{...styles.screenTitle, paddingTop:35}}>Astronomy Quizzes</Title>
       <ScrollView>{renderQuizCategories()}</ScrollView>
       {renderQuizModal()}
-      {renderResultsModal()}
+      {renderResultsModal()}</ImageBackground>
     </View>
   );
 };

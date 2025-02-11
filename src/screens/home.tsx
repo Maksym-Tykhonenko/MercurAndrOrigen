@@ -6,6 +6,7 @@ import {
   StyleSheet,
   TouchableOpacity,
   Alert,
+  ImageBackground,
 } from 'react-native';
 import {
   Text,
@@ -273,7 +274,8 @@ export const Home = () => {
 
   return (
     <SafeAreaView style={styles.container}>
-      <Header />
+      <ImageBackground style={{flex:1}} source={require('./../assets/bg.jpg')}>
+        <Header />
       <ScrollView style={styles.scrollContent}>
         <View style={styles.contentContainer}>
           {showWeatherAlert && (
@@ -489,6 +491,8 @@ export const Home = () => {
       <View style={styles.footer}>
         <Text style={styles.footerText}>Follow cosmic events with us ✨</Text>
       </View>
+      </ImageBackground>
+      
     </SafeAreaView>
   );
 };

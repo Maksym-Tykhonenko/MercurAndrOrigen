@@ -7,6 +7,7 @@ import {
   Image,
   TouchableOpacity,
   Dimensions,
+  ImageBackground
 } from 'react-native';
 import {
   Text,
@@ -284,6 +285,7 @@ export const PhotoAlbumScreen = () => {
 
   return (
     <SafeAreaView style={styles.container}>
+<ImageBackground style={{ flex: 1 }} source={require('./../assets/bg.jpg')}>
       <Header />
       <ScrollView style={styles.content}>
         <View style={styles.filterContainer}>
@@ -468,7 +470,8 @@ export const PhotoAlbumScreen = () => {
         </Modal>
       </Portal>
 
-      <FAB icon="camera" style={styles.fab} onPress={pickImage} />
+        <FAB icon="camera" style={styles.fab} onPress={pickImage} />
+        </ImageBackground>
     </SafeAreaView>
   );
 };

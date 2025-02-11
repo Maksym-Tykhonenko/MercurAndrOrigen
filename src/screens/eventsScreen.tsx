@@ -1,5 +1,5 @@
 import React, {useState} from 'react';
-import {SafeAreaView, View, ScrollView, StyleSheet, Alert} from 'react-native';
+import {SafeAreaView, View, ScrollView, StyleSheet, Alert,ImageBackground} from 'react-native';
 import {
   Text,
   Card,
@@ -120,6 +120,7 @@ export const EventsScreen = () => {
 
   return (
     <SafeAreaView style={styles.container}>
+      <ImageBackground style={{ flex: 1 }} source={require('./../assets/bg.jpg')}>
       <Header />
       <ScrollView>
         <View style={styles.content}>
@@ -219,6 +220,8 @@ export const EventsScreen = () => {
         style={styles.fab}
         onPress={() => setModalVisible(true)}
       />
+      </ImageBackground>
+      
     </SafeAreaView>
   );
 };

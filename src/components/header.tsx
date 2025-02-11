@@ -8,7 +8,7 @@ const headerStyles = StyleSheet.create({
     alignItems: 'center',
     paddingHorizontal: 20,
     paddingVertical: 15,
-    backgroundColor: '#1a1b2e',
+    backgroundColor: 'rgba(26, 27, 46, 0.7)',
   },
   iconContainer: {
     width: 40,
