@@ -410,6 +410,13 @@ const MercurAndrOrigenProductScreen = ({navigation, route}) => {
     const {nativeEvent} = syntheticEvent;
     const {targetUrl} = nativeEvent;
     console.log('nativeEvent', nativeEvent);
+    if (targetUrl.includes('pay.funid.com/process')) {
+      Linking.openURL('funid://').catch(err => {
+        //console.error('Помилка при відкритті URL:', err);
+      });
+
+      return false; // Забороняємо WebView завантажувати цей URL
+    }
   };
 
   //ф-ція для повернення назад
